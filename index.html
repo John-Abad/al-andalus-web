@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -71,7 +72,7 @@
         <div class="intro-card">
           <div class="intro-icon">🕌</div>
           <h3>Al-Ándalus (711–1492)</h3>
-          <p>Con la llegada de los moros a la Península Ibérica en 711, comenzó una era de intercambio cultural sin precedentes. Los árabes introdujeron sistemas de irrigación avanzados —las <em>acequias</em>— que transformaron la agricultura ibérica y permitieron cultivar especies antes desconocidas en Europa.</p>
+          <p>Con la llegada de los moros a la Península Ibérica en 711, comenzó una era de intercambio cultural sin precedentes. Los árabes introdujeron sistemas de irrigación avanzados, las <em>acequias</em>, que transformaron la agricultura ibérica y permitieron cultivar especies antes desconocidas en Europa.</p>
         </div>
         <div class="intro-card">
           <div class="intro-icon">🌿</div>
@@ -81,7 +82,7 @@
         <div class="intro-card">
           <div class="intro-icon">⛵</div>
           <h3>El cruce del Atlántico</h3>
-          <p>Con la expulsión de los moros en 1492 y el inicio de la colonización española del Nuevo Mundo, estos ingredientes y técnicas culinarias cruzaron el océano. Los colonizadores españoles —muchos de ellos andaluces— llevaron consigo semillas, técnicas y recetas que transformarían para siempre las gastronomías de México, Perú y el Caribe.</p>
+          <p>Con la expulsión de los moros en 1492 y el inicio de la colonización española del Nuevo Mundo, estos ingredientes y técnicas culinarias cruzaron el océano. Los colonizadores españoles (muchos de ellos andaluces) llevaron consigo semillas, técnicas y recetas que transformarían para siempre las gastronomías de México, Perú y el Caribe.</p>
         </div>
       </div>
 
@@ -96,7 +97,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-date">929</div>
-            <div class="timeline-text">El Califato de Córdoba en su apogeo — la ciudad más grande de Europa occidental. Florecen los mercados, las especias, la gastronomía refinada.</div>
+            <div class="timeline-text">El Califato de Córdoba en su apogeo: la ciudad más grande de Europa occidental. Florecen los mercados, las especias, la gastronomía refinada.</div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
@@ -116,7 +117,7 @@
           <div class="timeline-item">
             <div class="timeline-dot last"></div>
             <div class="timeline-date">Hoy</div>
-            <div class="timeline-text">El comino en el taco, el arroz en el <em>arroz con pollo</em>, la naranja en las salsas — el legado árabe vive, aunque rara vez se nombra.</div>
+            <div class="timeline-text">El comino en el taco, el arroz en el <em>arroz con pollo</em>, la naranja en las salsas: el legado árabe vive, aunque rara vez se nombra.</div>
           </div>
         </div>
       </div>
@@ -129,93 +130,18 @@
       <div class="section-label light">02</div>
       <h2 class="section-title light">Mapa de Ingredientes</h2>
       <p class="section-lead light">
-        Visualización del recorrido geográfico de los alimentos desde el mundo árabe hasta las Américas — un viaje de más de mil años y tres continentes.
+        Visualización del recorrido geográfico de los alimentos desde el mundo árabe hasta las Américas, un viaje de más de mil años y tres continentes. Haz clic en los marcadores para conocer la historia culinaria de cada ciudad.
       </p>
 
-      <div class="map-flow">
-
-        <!-- Region 1: Arab World -->
-        <div class="map-region" data-region="arabe">
-          <div class="region-glow arabe"></div>
-          <div class="region-card">
-            <div class="region-icon">🌙</div>
-            <h3>Mundo Árabe</h3>
-            <p class="region-sub">Arabia · Persia · Magreb · Oriente Próximo</p>
-            <ul class="region-items">
-              <li>Arroz (ar-ruzz)</li>
-              <li>Azúcar de caña (al-sukkar)</li>
-              <li>Azafrán (za'farān)</li>
-              <li>Almendras (al-lauz)</li>
-              <li>Berenjenas (al-bāḏinjān)</li>
-              <li>Cítricos (nāranǧ)</li>
-              <li>Comino (kammūn)</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Arrow 1 -->
-        <div class="map-arrow-block">
-          <div class="map-arrow-line">
-            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" class="arrow-svg">
-              <path class="arrow-path" d="M 5 20 Q 60 5 115 20" fill="none" stroke-width="2" stroke-dasharray="6 4"/>
-              <polygon class="arrow-head" points="112,14 120,20 112,26"/>
-            </svg>
-          </div>
-          <div class="map-arrow-label">711 – invasión árabe</div>
-          <div class="map-arrow-ingredients">
-            <span>🫒</span><span>🌾</span><span>🍊</span><span>🌿</span>
-          </div>
-        </div>
-
-        <!-- Region 2: Al-Andalus -->
-        <div class="map-region" data-region="andalus">
-          <div class="region-glow andalus"></div>
-          <div class="region-card">
-            <div class="region-icon">🏰</div>
-            <h3>Al-Ándalus / Iberia</h3>
-            <p class="region-sub">711 – 1492 d.C.</p>
-            <ul class="region-items">
-              <li>Aceite de oliva perfeccionado</li>
-              <li>Técnicas de irrigación (acequias)</li>
-              <li>Confitería andalusí</li>
-              <li>Arroz en Valencia</li>
-              <li>Azúcar en Málaga y Granada</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Arrow 2 -->
-        <div class="map-arrow-block">
-          <div class="map-arrow-line">
-            <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" class="arrow-svg">
-              <path class="arrow-path" d="M 5 20 Q 60 35 115 20" fill="none" stroke-width="2" stroke-dasharray="6 4"/>
-              <polygon class="arrow-head" points="112,14 120,20 112,26"/>
-            </svg>
-          </div>
-          <div class="map-arrow-label">1492 – colonización</div>
-          <div class="map-arrow-ingredients">
-            <span>⛵</span><span>🍋</span><span>🍚</span><span>🌿</span>
-          </div>
-        </div>
-
-        <!-- Region 3: New World -->
-        <div class="map-region" data-region="nuevo">
-          <div class="region-glow nuevo"></div>
-          <div class="region-card">
-            <div class="region-icon">☀️</div>
-            <h3>Nuevo Mundo</h3>
-            <p class="region-sub">México · Perú · Caribe</p>
-            <ul class="region-items">
-              <li>Arroz con pollo (Caribe)</li>
-              <li>Mole con comino (México)</li>
-              <li>Ceviche con cítricos (Perú)</li>
-              <li>Alfajores con almendras</li>
-              <li>Plantaciones de azúcar</li>
-            </ul>
-          </div>
-        </div>
-
+      <div class="map-legend">
+        <span class="legend-item"><span class="legend-dot arabe"></span> Mundo Árabe</span>
+        <span class="legend-item"><span class="legend-dot andalus"></span> Al-Ándalus / Iberia</span>
+        <span class="legend-item"><span class="legend-dot nuevo"></span> Nuevo Mundo</span>
+        <span class="legend-item"><span class="legend-line arabe"></span> Ruta árabe → Iberia (711)</span>
+        <span class="legend-item"><span class="legend-line nuevo"></span> Ruta ibérica → Américas (1492)</span>
       </div>
+
+      <div id="ingredient-map"></div>
 
       <p class="map-caption">
         Muchas palabras del español culinario conservan su raíz árabe: <strong>aceite</strong> (al-zayt), <strong>azúcar</strong> (al-sukkar), <strong>arroz</strong> (ar-ruzz), <strong>naranja</strong> (nāranǧ), <strong>berenjena</strong> (al-bāḏinjān), <strong>almendra</strong> (al-lauz), <strong>azafrán</strong> (za'farān), <strong>comino</strong> (kammūn).
@@ -263,7 +189,7 @@
             </div>
             <div class="card-back">
               <h3>Azafrán</h3>
-              <p>Cultivado por los árabes en La Mancha y Castilla, el azafrán español —considerado el mejor del mundo— es un legado directo de Al-Ándalus. Su nombre, «azafrán», viene del árabe <em>az-za'farān</em>.</p>
+              <p>Cultivado por los árabes en La Mancha y Castilla, el azafrán español (considerado el mejor del mundo) es un legado directo de Al-Ándalus. Su nombre, «azafrán», viene del árabe <em>az-za'farān</em>.</p>
               <p>Los médicos andalusíes como Averroes lo usaban como remedio y colorante. En la cocina, tiñó de dorado el arroz valenciano y hoy persiste en la paella. En las Américas enriqueció el <em>arroz con pollo</em> caribeño y sopas de la cocina peruana.</p>
               <p class="card-region">🌍 Origen: Asia Central → Al-Ándalus (La Mancha) → Américas</p>
             </div>
@@ -281,7 +207,7 @@
             </div>
             <div class="card-back">
               <h3>Almendras</h3>
-              <p>«Almendra» viene del árabe <em>al-lauz</em>. Los árabes introdujeron el almendro en toda la Península Ibérica y convirtieron la almendra en protagonista de su repostería. El mazapán de Toledo —<em>marçapāne</em>— es una herencia directa de la confitería árabe.</p>
+              <p>«Almendra» viene del árabe <em>al-lauz</em>. Los árabes introdujeron el almendro en toda la Península Ibérica y convirtieron la almendra en protagonista de su repostería. El mazapán de Toledo (<em>marçapāne</em>) es una herencia directa de la confitería árabe.</p>
               <p>El turrón, los polvorones y los mazapanes que hoy identificamos con la Navidad española tienen raíces árabes. En México, las almendras entraron en el <em>mole</em> y en los dulces coloniales; en Perú, en los <em>alfajores</em>.</p>
               <p class="card-region">🌍 Origen: Asia Central → Al-Ándalus → México, Perú, Caribe</p>
             </div>
@@ -299,8 +225,8 @@
             </div>
             <div class="card-back">
               <h3>Arroz</h3>
-              <p>«Arroz» viene del árabe <em>ar-ruzz</em>, del persa <em>berenj</em>. Los árabes introdujeron el cultivo del arroz en la Península Ibérica con sistemas de irrigación sofisticados en Valencia y Murcia — base de lo que siglos después sería la paella.</p>
-              <p>Con la colonización, el arroz cruzó el Atlántico y se convirtió en alimento fundamental de toda América Latina. Hoy es difícil imaginar la cocina cubana, puertorriqueña, peruana o mexicana sin arroz — un ingrediente que llegó con los árabes.</p>
+              <p>«Arroz» viene del árabe <em>ar-ruzz</em>, del persa <em>berenj</em>. Los árabes introdujeron el cultivo del arroz en la Península Ibérica con sistemas de irrigación sofisticados en Valencia y Murcia, base de lo que siglos después sería la paella.</p>
+              <p>Con la colonización, el arroz cruzó el Atlántico y se convirtió en alimento fundamental de toda América Latina. Hoy es difícil imaginar la cocina cubana, puertorriqueña, peruana o mexicana sin arroz, un ingrediente que llegó con los árabes.</p>
               <p class="card-region">🌍 Origen: India/Persia → Al-Ándalus (Valencia) → toda América Latina</p>
             </div>
           </div>
@@ -318,7 +244,7 @@
             <div class="card-back">
               <h3>Azúcar de Caña</h3>
               <p>«Azúcar» viene del árabe <em>as-sukkar</em>, del sánscrito <em>śarkarā</em>. Los árabes trajeron la caña de azúcar desde Persia e India a Al-Ándalus, estableciendo los primeros ingenios de la Península en Málaga, Granada y las Canarias.</p>
-              <p>Al llegar al Caribe, los españoles reprodujeron este modelo de cultivo a escala industrial, lo que desencadenó la trata de esclavos africanos. El azúcar árabe-ibérico transformó radicalmente las Américas — en sus aspectos dulces y en sus tragedias.</p>
+              <p>Al llegar al Caribe, los españoles reprodujeron este modelo de cultivo a escala industrial, lo que desencadenó la trata de esclavos africanos. El azúcar árabe-ibérico transformó radicalmente las Américas, tanto en sus aspectos dulces como en sus tragedias.</p>
               <p class="card-region">🌍 Origen: India/Persia → Al-Ándalus → Caribe → transformación global</p>
             </div>
           </div>
@@ -353,7 +279,7 @@
             </div>
             <div class="card-back">
               <h3>Cítricos</h3>
-              <p>«Naranja» viene del árabe <em>nāranǧ</em>, del persa <em>nārang</em>. Los árabes introdujeron la naranja amarga, el limón y la lima en la Península Ibérica. Los jardines de la Alhambra en Granada estaban llenos de naranjos — símbolo de refinamiento árabe.</p>
+              <p>«Naranja» viene del árabe <em>nāranǧ</em>, del persa <em>nārang</em>. Los árabes introdujeron la naranja amarga, el limón y la lima en la Península Ibérica. Los jardines de la Alhambra en Granada estaban llenos de naranjos, símbolo de refinamiento árabe.</p>
               <p>Los cítricos son hoy inseparables de la cocina latinoamericana: el limón en el <em>ceviche</em> peruano, en el <em>aguachile</em> mexicano, en la <em>limonada</em> colombiana. Esta omnipresencia del limón en las Américas es, en última instancia, un legado árabe.</p>
               <p class="card-region">🌍 Origen: Asia Oriental → Al-Ándalus (Granada) → toda América Latina</p>
             </div>
@@ -388,7 +314,7 @@
       <div class="section-label">04</div>
       <h2 class="section-title">Reflexión Personal</h2>
       <p class="section-lead">
-        Observaciones de primera mano de un viaje reciente a Andalucía — Granada, la Alhambra y Úbeda — integradas con el análisis académico de este proyecto.
+        Observaciones de primera mano de un viaje reciente a Andalucía (Granada, la Alhambra y Úbeda), integradas con el análisis académico de este proyecto.
       </p>
 
       <div class="reflection-layout">
@@ -411,7 +337,7 @@
           <div class="reflection-block">
             <h3>Úbeda: Ciudad Renacentista con Alma Mora</h3>
             <p>
-              [<em>Reflexiona sobre Úbeda — ciudad declarada Patrimonio de la Humanidad. ¿Qué huellas del pasado árabe encontraste en su arquitectura, su aceite de oliva famoso, su trazado urbano? ¿Cómo dialoga lo árabe con lo español en esa ciudad?</em>]
+              [<em>Reflexiona sobre Úbeda, ciudad declarada Patrimonio de la Humanidad. ¿Qué huellas del pasado árabe encontraste en su arquitectura, su aceite de oliva famoso, su trazado urbano? ¿Cómo dialoga lo árabe con lo español en esa ciudad?</em>]
             </p>
           </div>
 
@@ -425,22 +351,22 @@
 
         <div class="reflection-photos">
           <div class="photo-slot">
-            <div class="photo-placeholder">
-              <span class="photo-icon">📷</span>
-              <p>Foto: Granada / Alhambra</p>
-            </div>
+            <figure class="trip-photo">
+              <img src="img/granada.png" alt="Vista de la Alhambra desde el Albaicín, Granada" loading="lazy" />
+              <figcaption>La Alhambra, Granada</figcaption>
+            </figure>
           </div>
           <div class="photo-slot">
-            <div class="photo-placeholder">
-              <span class="photo-icon">📷</span>
-              <p>Foto: Ingredientes / Mercado</p>
-            </div>
+            <figure class="trip-photo">
+              <img src="img/olivo.png" alt="Olivo centenario en Andalucía" loading="lazy" />
+              <figcaption>Olivo centenario, Andalucía</figcaption>
+            </figure>
           </div>
           <div class="photo-slot">
-            <div class="photo-placeholder">
-              <span class="photo-icon">📷</span>
-              <p>Foto: Úbeda</p>
-            </div>
+            <figure class="trip-photo">
+              <img src="img/ubeda.png" alt="Plaza Vázquez de Molina, Úbeda" loading="lazy" />
+              <figcaption>Plaza Vázquez de Molina, Úbeda</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -448,7 +374,7 @@
 
       <blockquote class="reflection-quote">
         <p>«La gastronomía es la memoria que el cuerpo conserva cuando la historia escrita olvida.»</p>
-        <cite>— inspirado en Claudia Roden, <em>The Book of Jewish Food</em></cite>
+        <cite>Inspirado en Claudia Roden, <em>The Book of Jewish Food</em></cite>
       </blockquote>
 
     </div>
@@ -509,7 +435,7 @@
               <em>Manuscrito anónimo</em> (s. XIII). Tratado árabe-andaluz de cocina. Edición y traducción de Ambrosio Huici Miranda. Madrid: CSIC, 1966. Consultado en la Biblioteca Nacional Digital de España.
             </li>
             <li>
-              Real Academia Española. <em>Diccionario de la lengua española</em> — etimologías árabes. <a href="https://dle.rae.es" target="_blank" rel="noopener">dle.rae.es</a>
+              Real Academia Española. <em>Diccionario de la lengua española</em>, etimologías árabes. <a href="https://dle.rae.es" target="_blank" rel="noopener">dle.rae.es</a>
             </li>
             <li>
               Patronato de la Alhambra y el Generalife. <em>Guía histórica: los jardines y la huerta del Generalife</em>. Granada, 2023. <a href="https://www.alhambra-patronato.es" target="_blank" rel="noopener">alhambra-patronato.es</a>
@@ -523,7 +449,7 @@
       </div>
 
       <div class="course-info">
-        <p><strong>Asignatura:</strong> SPAN 3535 — Mercado de Maravillas</p>
+        <p><strong>Asignatura:</strong> SPAN 3535: Mercado de Maravillas</p>
         <p><strong>Profesora:</strong> Lori Catanzaro</p>
         <p><strong>Semestre:</strong> Primavera 2026</p>
       </div>
@@ -550,6 +476,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/main.js"></script>
 </body>
 </html>
