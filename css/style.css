@@ -873,6 +873,24 @@ h1, h2, h3 {
   color: rgba(201,162,39,0.55);
 }
 
+.footer-author {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201,162,39,0.18);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  letter-spacing: 0.02em;
+}
+
+.footer-author strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
 /* ── Leaflet Map ── */
 #ingredient-map {
   height: 560px;
