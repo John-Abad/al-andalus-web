@@ -1040,6 +1040,356 @@ h1, h2, h3 {
   }
 }
 
+/* =============================================
+   INGREDIENT DETAIL PAGE
+   ============================================= */
+
+.ingrediente-page {
+  background: var(--cream);
+}
+
+/* ── "Leer más" link on card back ── */
+.card-back .card-read-more {
+  margin-top: 0.75rem;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  padding: 0.4rem 0.85rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all var(--transition);
+  align-self: flex-start;
+}
+
+.card-back .card-read-more:hover {
+  background: var(--gold);
+  color: var(--espresso);
+}
+
+/* ── Ingredient hero ── */
+.ing-hero {
+  --ing-color: #C9A227;
+  min-height: 70vh;
+  background:
+    radial-gradient(ellipse at top, rgba(255,255,255,0.08) 0%, transparent 60%),
+    linear-gradient(160deg, var(--burgundy-deep) 0%, #4A1828 50%, var(--espresso) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ing-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--ing-color) 0%, transparent 60%);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.ing-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  text-align: center;
+  color: var(--cream);
+}
+
+.ing-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(250,243,224,0.65);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.ing-back:hover {
+  color: var(--gold-light);
+}
+
+.ing-hero-emoji {
+  font-size: clamp(4rem, 10vw, 6.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.4));
+}
+
+.ing-hero-arabic {
+  font-family: var(--font-arabic);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: var(--ing-color);
+  direction: rtl;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.ing-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+
+.ing-hero-translit {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--gold-light);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.ing-hero-subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: rgba(250,243,224,0.75);
+  font-weight: 300;
+  font-style: italic;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ── Ingredient map section ── */
+.ing-map-section #ing-map {
+  height: 520px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(201,162,39,0.25);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* ── History section ── */
+.ing-history-body {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.ing-history-block {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.ing-history-block:last-child {
+  border-bottom: none;
+}
+
+.ing-history-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--gold);
+  opacity: 0.7;
+  font-weight: 700;
+  padding-top: 0.2rem;
+}
+
+.ing-history-text h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--espresso);
+  margin-bottom: 0.75rem;
+}
+
+.ing-history-text p {
+  color: var(--text-medium);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* ── Etymology + Facts split ── */
+.ing-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.ing-etim-text {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+  padding: 1.5rem;
+  background: white;
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+}
+
+.ing-datos {
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.ing-datos-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(201,162,39,0.25);
+}
+
+.ing-datos-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ing-datos-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(250,243,224,0.85);
+}
+
+.ing-datos-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+/* ── Recipes grid ── */
+.ing-recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.ing-recipe-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--gold);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.ing-recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.ing-recipe-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.ing-recipe-tag.andalus {
+  background: rgba(196,98,45,0.15);
+  color: #8B3B12;
+}
+
+.ing-recipe-tag.nuevo {
+  background: rgba(45,125,125,0.15);
+  color: #1A5C5C;
+}
+
+.ing-recipe-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--espresso);
+  margin-bottom: 0.5rem;
+}
+
+.ing-recipe-card p {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ── Sources section (dark) ── */
+.ing-sources-section {
+  text-align: center;
+}
+
+.ing-sources-list {
+  list-style: none;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.ing-sources-list li {
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  color: rgba(250,243,224,0.85);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+}
+
+.ing-next-btn {
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.25rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.ing-next-btn:hover {
+  background: var(--gold);
+  color: var(--espresso);
+}
+
+/* ── Responsive ── */
+@media (max-width: 820px) {
+  .ing-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .ing-history-block {
+    grid-template-columns: 60px 1fr;
+    gap: 1.25rem;
+    padding: 1.75rem 0;
+  }
+
+  .ing-history-num {
+    font-size: 1.5rem;
+  }
+
+  .ing-map-section #ing-map {
+    height: 380px;
+  }
+}
+
 /* ── Print styles ── */
 @media print {
   #navbar { display: none; }

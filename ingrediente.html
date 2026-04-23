@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Ingrediente | De Al-Ándalus al Nuevo Mundo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="ingrediente-page">
+
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">&#x2726; Al-Ándalus</a>
+      <ul class="nav-links">
+        <li><a href="index.html#introduccion">Introducción</a></li>
+        <li><a href="index.html#mapa">Mapa</a></li>
+        <li><a href="index.html#galeria">Ingredientes</a></li>
+        <li><a href="index.html#reflexion">Reflexión</a></li>
+        <li><a href="index.html#fuentes">Fuentes</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ── INGREDIENT HERO ── -->
+  <section class="ing-hero" id="ing-hero">
+    <div class="ing-hero-inner">
+      <a href="index.html#galeria" class="ing-back">← Volver a la galería</a>
+      <div class="ing-hero-emoji" id="ing-emoji">🫒</div>
+      <p class="ing-hero-arabic" id="ing-arabic">—</p>
+      <h1 class="ing-hero-title" id="ing-name">Ingrediente</h1>
+      <p class="ing-hero-translit" id="ing-translit">—</p>
+      <p class="ing-hero-subtitle" id="ing-subtitle">—</p>
+    </div>
+  </section>
+
+  <!-- ── MAP ── -->
+  <section class="section section-dark ing-map-section">
+    <div class="container">
+      <div class="section-label light">Recorrido</div>
+      <h2 class="section-title light">La ruta del ingrediente</h2>
+      <p class="section-lead light" id="ing-map-lead">Desde su origen asiático o mediterráneo, este ingrediente llegó a Al-Ándalus con los árabes y cruzó el Atlántico con los colonizadores españoles. Haz clic en cualquier marcador para leer la historia de cada ciudad.</p>
+
+      <div class="map-legend">
+        <span class="legend-item"><span class="legend-dot arabe"></span> Origen / Mundo Árabe</span>
+        <span class="legend-item"><span class="legend-dot andalus"></span> Al-Ándalus / Iberia</span>
+        <span class="legend-item"><span class="legend-dot nuevo"></span> Nuevo Mundo</span>
+        <span class="legend-item"><span class="legend-line arabe"></span> Ruta árabe → Iberia</span>
+        <span class="legend-item"><span class="legend-line nuevo"></span> Ruta ibérica → Américas</span>
+      </div>
+
+      <div id="ing-map"></div>
+    </div>
+  </section>
+
+  <!-- ── HISTORY ── -->
+  <section class="section ing-history">
+    <div class="container">
+      <div class="section-label">Historia</div>
+      <h2 class="section-title">Una biografía del ingrediente</h2>
+      <div id="ing-history-content" class="ing-history-body">
+        <!-- injected -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ETYMOLOGY & FACTS ── -->
+  <section class="section section-warm">
+    <div class="container">
+      <div class="ing-split">
+        <div class="ing-etim">
+          <div class="section-label">Etimología</div>
+          <h2 class="section-title">Las palabras también viajaron</h2>
+          <p id="ing-etim-text" class="ing-etim-text">—</p>
+        </div>
+        <div class="ing-datos">
+          <h3 class="ing-datos-title">Datos que el profesor va a citar</h3>
+          <ul id="ing-datos-list" class="ing-datos-list">
+            <!-- injected -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RECIPES ── -->
+  <section class="section ing-recipes">
+    <div class="container">
+      <div class="section-label">Huella en la mesa</div>
+      <h2 class="section-title">Recetas que trazan el recorrido</h2>
+      <p class="section-lead">Platos emblemáticos de cada etapa del viaje: desde la cocina andalusí medieval hasta las cocinas latinoamericanas contemporáneas.</p>
+      <div id="ing-recipes-grid" class="ing-recipes-grid">
+        <!-- injected -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOURCES ── -->
+  <section class="section section-dark ing-sources-section">
+    <div class="container">
+      <div class="section-label light">Bibliografía específica</div>
+      <h2 class="section-title light">Fuentes consultadas</h2>
+      <p class="section-lead light">Referencias académicas consultadas específicamente para este ingrediente.</p>
+      <ul id="ing-sources-list" class="ing-sources-list">
+        <!-- injected -->
+      </ul>
+      <a href="index.html#galeria" class="ing-next-btn">Ver otros ingredientes →</a>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <p class="footer-title">De Al-Ándalus al Nuevo Mundo</p>
+      <p class="footer-sub">El legado culinario árabe en la cocina hispana global</p>
+      <p class="footer-arabic">من الأندلس إلى العالم الجديد</p>
+      <p class="footer-course">SPAN 3535 &nbsp;·&nbsp; Mercado de Maravillas &nbsp;·&nbsp; Primavera 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/ingredientes.js"></script>
+  <script src="js/ingrediente-page.js"></script>
+</body>
+</html>
