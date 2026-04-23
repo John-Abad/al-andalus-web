@@ -54,7 +54,7 @@ function initScrollReveal() {
     '.timeline-item',
     '.map-region',
     '.map-arrow-block',
-    '.ingredient-card',
+    '.ing-card',
     '.reflection-block',
     '.source-category',
     '.section-title',

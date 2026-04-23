@@ -4,7 +4,7 @@
    map points, academic narrative, and sources.
    ============================================= */
 
-const INGREDIENTES = {
+window.INGREDIENTES = {
 
   /* ═══════════════════════════════ ACEITE DE OLIVA ═══════════════════════════════ */
   'aceite-de-oliva': {
@@ -354,6 +354,131 @@ const INGREDIENTES = {
       'Marín, Manuela. «La cocina árabe y su aportación a la española», Awrāq 14, 1993.',
       'Ibn Razīn al-Tujībī. Fiḍālat al-Khiwān. Ed. M. Marín, Gijón: Trea, 2007.',
       'Davidson, Alan. The Oxford Companion to Food, 3rd ed., Oxford UP, 2014 — entrada "eggplant".',
+    ],
+  },
+
+  /* ═══════════════════════════════ CÍTRICOS ═══════════════════════════════ */
+  'citricos': {
+    nombre: 'Cítricos',
+    arabe: 'النارنج',
+    translit: 'an-nāranǧ',
+    emoji: '🍊',
+    color: '#E8843A',
+    subtitle: 'La naranja, el limón y la lima: el perfume árabe de América Latina',
+    mapCenter: [25, 0],
+    mapZoom: 3,
+    regiones: {
+      origen: [
+        { pos: [23.13, 113.26], name: 'Guangzhou (China)', info: 'El centro original del género Citrus está en el sureste asiático: China y el norte de India. La mandarina, la naranja y la cidra salen de esta región y se difunden por Asia.' },
+        { pos: [26.14, 91.73], name: 'Assam (India)', info: 'El limón y la lima se domesticaron en Asia del Sur. Desde India viajan con los comerciantes persas y árabes hacia el Mediterráneo.' },
+        { pos: [32.65, 51.66], name: 'Isfahán (Persia)', info: 'Los persas fueron los primeros grandes cultivadores de cítricos fuera de Asia. Los jardines persas con naranjos amargos son el modelo del que después copiaron los árabes en Al-Ándalus.' },
+      ],
+      andalus: [
+        { pos: [37.89, -4.78], name: 'Córdoba', info: 'La mezquita-catedral de Córdoba conserva hoy el Patio de los Naranjos, un jardín andalusí original donde los árabes plantaron naranjos amargos en el s. X como símbolo de abundancia.' },
+        { pos: [37.18, -3.60], name: 'Granada', info: 'Los jardines del Generalife y el Patio de los Arrayanes de la Alhambra estaban llenos de naranjos y limoneros. La nāranǧ era símbolo del refinamiento nazarí.' },
+        { pos: [37.39, -5.99], name: 'Sevilla', info: 'La naranja amarga (nāranǧ bāhira) es hoy conocida como «naranja de Sevilla». Los cítricos ibéricos viajaron a Inglaterra, donde se usan en la mermelada tradicional, y a América.' },
+        { pos: [39.47, -0.38], name: 'Valencia', info: 'La huerta valenciana es hoy uno de los grandes centros citrícolas de Europa. Su tradición arranca directamente del cultivo árabe-andalusí.' },
+      ],
+      americas: [
+        { pos: [19.17, -96.15], name: 'Veracruz (México)', info: 'Los primeros cítricos del Nuevo Mundo llegaron con Colón en su segundo viaje (1493) desde las Canarias. Veracruz fue uno de los primeros puntos de plantación masiva.' },
+        { pos: [-12.05, -77.04], name: 'Lima (Perú)', info: 'El limón peruano (Citrus aurantifolia), alma del ceviche, desciende directamente de los limones introducidos en Al-Ándalus por los árabes. Sin el limón árabe-andalusí no hay ceviche.' },
+        { pos: [23.13, -82.38], name: 'La Habana', info: 'Los cítricos cubanos, las naranjas, los limones y las limas son base de los mojitos y de la repostería tradicional.' },
+        { pos: [19.43, -99.13], name: 'Ciudad de México', info: 'El aguachile, los cocteles de mariscos, las salsas verdes con lima: toda la cocina mexicana cítrica tiene raíces árabes.' },
+      ],
+    },
+    rutas: [
+      { color: 'arabe', coords: [[23.13, 113.26], [26.14, 91.73], [32.65, 51.66], [33.32, 44.42], [30.04, 31.24], [37.89, -4.78]] },
+      { color: 'nuevo', coords: [[37.39, -5.99], [28.10, -15.41], [19.17, -96.15], [23.13, -82.38], [-12.05, -77.04]] },
+    ],
+    historia: {
+      'El viaje más largo del huerto': 'Los cítricos tienen uno de los recorridos más largos de todos los ingredientes de este proyecto. Su origen está en el sudeste asiático: China, Vietnam, Birmania, noreste de India. De ahí salieron hace milenios la cidra (el primer cítrico conocido en Occidente), el limón, la lima y la naranja amarga. Fueron los comerciantes persas quienes los llevaron a Mesopotamia, y los árabes quienes, entre los siglos VIII y X, los extendieron por todo el Mediterráneo.',
+      'La naranja de los árabes es la amarga': 'Un detalle importante: los árabes llevaron a Al-Ándalus la naranja amarga (Citrus aurantium), no la dulce. La naranja dulce (Citrus sinensis) llegó a Europa después, en el siglo XV, por la ruta portuguesa desde India. Por eso en muchas lenguas europeas «naranja» se dice portogallo o alguna variante (el turco conserva portakal). En español, en cambio, se conservó el nombre árabe: nāranǧ → naranja.',
+      'Los jardines como paisaje ideológico': 'Para los árabes, el cítrico no era solo un alimento: era una filosofía de jardín. El Patio de los Naranjos de la Mezquita de Córdoba (s. X), los jardines del Generalife en Granada, los patios andalusíes con naranjos o limoneros: todos reproducen el jardín paradisíaco descrito en el Corán. Los naranjos dan sombra, aroma y símbolo de prosperidad. El jardín andalusí es, literalmente, un jardín árabe en España.',
+      'Sevilla y el cruce al Nuevo Mundo': 'La naranja amarga sevillana es hoy uno de los ingredientes más exportados del Reino Unido por la mermelada tradicional. Pero antes de eso, los cítricos sevillanos viajaron al Nuevo Mundo. Colón los llevó en su segundo viaje (1493) desde las Canarias, y se plantaron en La Española, después en Cuba, México, Perú y todo el continente.',
+      'El limón del ceviche, el perfume de América': 'El limón peruano, esencial para el ceviche, desciende genéticamente de las limas y limones árabes-andalusíes. El aguachile mexicano, la limonada colombiana, el mojito cubano, los cocteles de mariscos: la omnipresencia del cítrico en la cocina latinoamericana es, en última instancia, una herencia árabe. Cuando un peruano exprime un limón sobre un pescado crudo, está ejecutando un gesto cuya cadena empieza hace mil años en un huerto cordobés regado por acequias árabes.',
+    },
+    etimologia: 'naranja ← nāranǧ (نارنج), del persa nārang, del sánscrito nāraṅga. Limón ← līmūn (ليمون), de la misma raíz persa-árabe. Lima ← līma (ليمة). Azahar (la flor del naranjo) ← az-zahr (الزهر, "la flor"). Alcurria de los cítricos, en español, viene entera del árabe.',
+    recetas: [
+      { lugar: 'Al-Ándalus', nombre: 'Pato a la naranja amarga', desc: 'Receta medieval andalusí documentada en el Manuscrito anónimo del s. XIII. Aromatización de carnes con naranja amarga y especias.' },
+      { lugar: 'Al-Ándalus', nombre: 'Mermelada de naranja de Sevilla', desc: 'Preparación tradicional ibérica cuya versión inglesa moderna (Dundee marmalade) convirtió a Sevilla en proveedor mundial.' },
+      { lugar: 'Perú', nombre: 'Ceviche', desc: 'Plato firma del Perú, cuya acidez viene del limón (descendiente del līmūn árabe). Sin el cítrico árabe-andalusí no hay ceviche.' },
+      { lugar: 'México', nombre: 'Aguachile', desc: 'Preparación costera sinaloense que reproduce, con limón y chile, la técnica de «cocinar en cítrico» heredada del Mediterráneo.' },
+      { lugar: 'Cuba', nombre: 'Mojito', desc: 'Cóctel cubano con lima y ron. Los dos ingredientes tienen raíz árabe (lima de al-līma, ron del azúcar árabe).' },
+      { lugar: 'Colombia', nombre: 'Limonada de coco', desc: 'Mezcla caribeña que combina el limón árabe-andalusí con el coco del Pacífico.' },
+    ],
+    datos: [
+      'Los árabes llevaron a Al-Ándalus solo la naranja AMARGA. La dulce llegó mucho después desde Portugal e India.',
+      'El Patio de los Naranjos de la Mezquita de Córdoba conserva árboles descendientes de los plantados en el siglo X por los árabes.',
+      'El limón que se usa para el ceviche peruano (Citrus aurantifolia) es una variedad árabe-mediterránea introducida por los colonizadores españoles.',
+      'En inglés «orange marmalade» es casi siempre naranja amarga de Sevilla, exportada desde la Península ibérica como herencia andalusí.',
+      '«Azahar», la flor del naranjo, viene del árabe az-zahr. Es ingrediente esencial de la repostería andalusí y latinoamericana.',
+    ],
+    fuentes: [
+      'Ramón-Laca, L. «The introduction of cultivated citrus to Europe via Northern Africa and the Iberian Peninsula», Economic Botany 57(4), 2003.',
+      'Watson, Andrew M. Agricultural Innovation in the Early Islamic World. Cambridge UP, 1983.',
+      'Manuscrito anónimo hispano-magrebí del s. XIII. Trad. A. Huici Miranda, CSIC, 1966.',
+    ],
+  },
+
+  /* ═══════════════════════════════ COMINO ═══════════════════════════════ */
+  'comino': {
+    nombre: 'Comino',
+    arabe: 'الكمون',
+    translit: 'al-kammūn',
+    emoji: '🌿',
+    color: '#8B6F3A',
+    subtitle: 'La especia árabe que perfuma el taco mexicano',
+    mapCenter: [28, 5],
+    mapZoom: 3,
+    regiones: {
+      origen: [
+        { pos: [35.69, 51.42], name: 'Irán', info: 'El comino (Cuminum cyminum) se domesticó en el Mediterráneo oriental y el suroeste de Asia. Mesopotamia, Persia y Egipto lo usaban desde la antigüedad.' },
+        { pos: [33.32, 44.42], name: 'Bagdad', info: 'Los recetarios abásidas (s. IX-X) usan el comino en casi todos los platos de carne. Es una de las especias más citadas en el Kitāb al-Ṭabīḫ.' },
+        { pos: [30.04, 31.24], name: 'El Cairo', info: 'El comino es ingrediente básico del ful medames, el koshari y las mezclas de especias egipcias, todas con profunda raíz árabe.' },
+      ],
+      andalus: [
+        { pos: [37.89, -4.78], name: 'Córdoba', info: 'Los agrónomos andalusíes cultivaban el comino en los huertos de Córdoba. Los recetarios del s. XIII lo mencionan en prácticamente cada página.' },
+        { pos: [37.39, -5.99], name: 'Sevilla', info: 'El comino era ingrediente firma de la cocina andalusí cotidiana: guisos, adobos y embutidos. De Sevilla viajó con los colonizadores al Nuevo Mundo.' },
+        { pos: [36.72, -4.42], name: 'Málaga', info: 'La repostería andalusí también usaba comino en panes especiados y confituras saladas.' },
+      ],
+      americas: [
+        { pos: [19.43, -99.13], name: 'Ciudad de México', info: 'El comino es ingrediente central del chile mexicano, del mole poblano, de los adobos y de los tamales. Su presencia masiva en la cocina mexicana es, en origen, completamente árabe.' },
+        { pos: [14.63, -90.51], name: 'Guatemala', info: 'Los tamales guatemaltecos, los chiles rellenos y los recados llevan comino como ingrediente identitario.' },
+        { pos: [4.61, -74.08], name: 'Bogotá', info: 'La carne colombiana, los frijoles y los sancochos llevan comino como huella árabe-andalusí. El ajíaco santafereño lo integra desde el periodo colonial.' },
+        { pos: [23.13, -82.38], name: 'La Habana', info: 'La ropa vieja, los chicharrones y los guisos cubanos de carne usan comino como especia base, directamente heredado del repertorio andalusí.' },
+      ],
+    },
+    rutas: [
+      { color: 'arabe', coords: [[35.69, 51.42], [33.32, 44.42], [30.04, 31.24], [34.03, -5.00], [37.89, -4.78]] },
+      { color: 'nuevo', coords: [[37.39, -5.99], [28.10, -15.41], [23.13, -82.38], [19.43, -99.13], [14.63, -90.51], [4.61, -74.08]] },
+    ],
+    historia: {
+      'Una especia antigua que los árabes codificaron': 'El comino es una de las especias más antiguas documentadas de la humanidad. Aparece en tumbas egipcias, en la Biblia y en recetarios romanos. Pero fue la cocina árabe medieval la que lo convirtió en ingrediente sistemático y obligado. En los recetarios abásidas (Kitāb al-Ṭabīḫ de al-Warrāq, s. X) el comino aparece en prácticamente cada plato de carne: guisos, brochetas, salsas, embutidos.',
+      'De los zocos de Córdoba a los mesones de Sevilla': 'Los árabes introdujeron el comino sistemáticamente en Al-Ándalus. El agrónomo sevillano Ibn al-ʿAwwām (s. XII) describe su cultivo en su Kitāb al-Filāḥa. El Manuscrito anónimo hispano-magrebí del s. XIII, el recetario más detallado que conservamos de la cocina andalusí, usa el comino en docenas de recetas: carnes especiadas, adobos para pescado, panes aromáticos.',
+      'El embutido andalusí y su cruce al Nuevo Mundo': 'Los árabes no comían cerdo, pero desarrollaron técnicas de embutido que los cristianos peninsulares adoptaron y adaptaron. El chorizo, la longaniza y la morcilla españolas conservan del adobo árabe el uso intensivo del comino y del pimentón. Cuando los colonizadores cruzan al Nuevo Mundo, llevan con ellos estos embutidos y su sistema de especias. El comino entra por ahí en la cocina mexicana, guatemalteca, cubana y colombiana.',
+      'El chile mexicano: la huella árabe más inesperada': 'El chile mexicano, que suena a cocina puramente precolombina, lleva casi siempre comino. Un ingrediente mesoamericano (el chile, el maíz, el frijol) combinado con una especia árabe (el comino) a través del canal andaluz produce la cocina mexicana moderna. Lo mismo ocurre con el mole poblano, con los adobos del cochinita pibil, con los tamales guatemaltecos, con el ajíaco colombiano. Detrás de estos platos mestizos late el comino árabe.',
+      'Un puente oculto': 'Quizá ninguna especia ilustra mejor la persistencia del legado árabe en la cocina latinoamericana que el comino. Nadie dice «voy a echar una especia árabe» al guiso: simplemente echa comino. Pero ese gesto mecánico reproduce, siglo tras siglo, una tradición que viene del Bagdad abásida, pasa por Córdoba y Sevilla, y termina perfumando un taco en la Ciudad de México.',
+    },
+    etimologia: 'comino ← al-kammūn (الكمون), del siríaco kammūnā. La palabra llegó al latín tardío (cuminum) pero el español medieval adoptó la forma árabe, reflejando que los árabes eran los distribuidores del comino en el Mediterráneo medieval.',
+    recetas: [
+      { lugar: 'Al-Ándalus', nombre: 'Adobo andalusí', desc: 'Mezcla de comino, pimentón, ajo, vinagre y hierbas. Base del adobo de carnes que después dio origen a los embutidos ibéricos.' },
+      { lugar: 'Al-Ándalus', nombre: 'Qirsha con comino', desc: 'Albóndigas de carne del Kitāb al-Ṭabīḫ de Ibn Razīn al-Tujībī (s. XIII), sazonadas fuertemente con comino.' },
+      { lugar: 'México', nombre: 'Mole poblano', desc: 'Una de las salsas más complejas del mundo; lleva comino como una de sus especias obligadas.' },
+      { lugar: 'México', nombre: 'Cochinita pibil', desc: 'Plato yucateco de cerdo adobado, cuyo adobo lleva comino en cantidad notable.' },
+      { lugar: 'Colombia', nombre: 'Ajíaco santafereño', desc: 'Sopa bogotana de pollo, papas y guascas, sazonada con comino desde el periodo virreinal.' },
+      { lugar: 'Cuba', nombre: 'Ropa vieja', desc: 'Carne deshebrada guisada con comino y pimentón, herencia directa del guiso andaluz.' },
+    ],
+    datos: [
+      'El comino aparece en más de 100 recetas del Manuscrito anónimo hispano-magrebí del s. XIII.',
+      'El chorizo español, y por extensión el mexicano, usa comino y pimentón en una combinación directamente heredada del adobo árabe-andalusí.',
+      'La palabra «comino» se usa como expresión desdeñosa en español («no me importa un comino») precisamente por lo abundante y barata que fue siempre esta especia.',
+      'El comino es probablemente la especia árabe-andalusí más consumida hoy en Latinoamérica, aunque casi nadie asocia su sabor a su origen cultural.',
+    ],
+    fuentes: [
+      'al-Warrāq, Ibn Sayyār. Kitāb al-Ṭabīḫ. Trad. Nawal Nasrallah como Annals of the Caliphs\' Kitchens, Brill, 2007.',
+      'Ibn Razīn al-Tujībī. Fiḍālat al-Khiwān. Ed. M. Marín, Gijón: Trea, 2007.',
+      'Manuscrito anónimo hispano-magrebí del s. XIII. Trad. A. Huici Miranda, CSIC, 1966.',
+      'Santich, Barbara. «The Evolution of Culinary Techniques in the Medieval Era», en Medieval Food Traditions, 2016.',
     ],
   },
 

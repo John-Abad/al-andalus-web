@@ -7,13 +7,14 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
+  const DB = window.INGREDIENTES || {};
 
-  if (!id || !window.INGREDIENTES || !INGREDIENTES[id]) {
+  if (!id || !DB[id]) {
     renderNotFound();
     return;
   }
 
-  const data = INGREDIENTES[id];
+  const data = DB[id];
 
   renderHero(data);
   renderHistory(data);

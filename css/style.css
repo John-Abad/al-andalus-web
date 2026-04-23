@@ -403,8 +403,122 @@ h1, h2, h3 {
   color: var(--gold-light);
 }
 
-/* ── Ingredient Cards ── */
+/* ── Ingredient Cards (new direct-link design) ── */
 .ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.ing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--gold);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.ing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(201,162,39,0.10), transparent 70%);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.ing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--terracotta);
+}
+
+.ing-card:hover::before {
+  opacity: 1.5;
+}
+
+.ing-card:hover .ing-card-cta {
+  background: var(--espresso);
+  color: var(--gold-light);
+  padding-left: 1.1rem;
+}
+
+.ing-card:hover .ing-card-cta::after {
+  transform: translateX(4px);
+}
+
+.ing-card-top {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cream-dark);
+  margin-bottom: 1rem;
+}
+
+.ing-card-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+
+.ing-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--espresso);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.ing-card-arabic {
+  font-family: var(--font-arabic);
+  font-size: 1rem;
+  color: var(--gold-dark);
+  direction: rtl;
+  opacity: 0.85;
+}
+
+.ing-card-desc {
+  color: var(--text-medium);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.ing-card-cta {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--gold-dark);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease;
+  align-self: stretch;
+}
+
+.ing-card-cta::after {
+  display: inline-block;
+  margin-left: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+/* Keep legacy flip card styles available (unused by new cards but harmless) */
+.legacy-flip-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
